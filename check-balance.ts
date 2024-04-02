@@ -1,3 +1,5 @@
+// CLI command: npx esrun check-balance.ts <publicKey>
+
 import { Connection, LAMPORTS_PER_SOL, PublicKey } from "@solana/web3.js";
 
 const suppliedPublicKey = process.argv[2];
@@ -5,11 +7,11 @@ if (!suppliedPublicKey) {
     throw new Error("Provide a public key to check the balance of!");
 }
 
-// // To connect to devnet
-// const connection = new Connection("https://api.devnet.solana.com", "confirmed");
+// To connect to devnet
+const connection = new Connection("https://api.devnet.solana.com", "confirmed");
 
-// To connect to mainnet
-const connection = new Connection("https://api.mainnet-beta.solana.com", "confirmed");
+// // To connect to mainnet
+// const connection = new Connection("https://api.mainnet-beta.solana.com", "confirmed");
 
 try {
     const publicKey = new PublicKey(suppliedPublicKey);
