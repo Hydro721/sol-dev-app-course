@@ -29,7 +29,7 @@ const balanceInLamports = await connection.getBalance(toPubkey);
 
 const balanceInSOL = balanceInLamports / LAMPORTS_PER_SOL;
 
-// Print to console
+// Print to console to confirm success
 console.log(
     `✅ Loaded our own keypair, the destination public key, and connected to Solana`
 );
